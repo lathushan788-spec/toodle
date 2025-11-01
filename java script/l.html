@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<style>
+    input{
+        border-radius: 10px;
+        border-color: black;
+        
+    }
+
+    button{
+        color: rgb(29, 85, 15);
+        background-color: yellowgreen;
+        
+    }
+    ul{
+        color: darkblue;
+        
+    }
+    body{
+        background-color: darkgoldenrod;
+    }
+
+</style>
+<div class="y">
+    <input placeholder="your notes" id="i">
+<button onclick="dd()">Click adding bellow</button>
+<ul id="lisit">
+    
+</ul>
+</div>
+<p><b>You can add notes easily.</b></p>
+
+<script>
+    var ul =document.getElementById("lisit")
+    var input=document.getElementById("i")
+    function dd(){
+        var a =document.createElement("li")
+        a.innerHTML=i.value+"<button onclick='del(event)'>Delete</button>"
+        ul.append(a)
+    }
+
+    function del(event)
+    {
+        event.target.parentElement.remove()
+    }
+</script>
+</body>
+</html>
